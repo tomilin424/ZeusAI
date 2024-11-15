@@ -1,0 +1,6 @@
+pyTelegramBotAPI
+openai
+python-dotenv
+SpeechRecognition
+pyttsx3
+httpx[http2,socks]

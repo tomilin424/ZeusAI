@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZeusAI</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body {
+            background-color: #17181C;
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 16px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+        }
+        .settings-icon {
+            font-size: 24px;
+            color: #8E8E93;
+        }
+        .voice-button {
+            background-color: #4B6BFB;
+            border-radius: 12px;
+            padding: 16px;
+            margin: 16px 0;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .chat-item {
+            background-color: #1E1F25;
+            border-radius: 12px;
+            padding: 16px;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+        .new-chat-button {
+            background-color: #4B6BFB;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 16px;
+            width: 100%;
+            margin-top: 16px;
+            cursor: pointer;
+            position: fixed;
+            bottom: 16px;
+            left: 16px;
+            right: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>ZeusAI</h1>
+        <div class="settings-icon">⚙️</div>
+    </div>
+
+    <div class="voice-button">
+        <span>🎤 Голосовой ассистент</span>
+        <span style="margin-left: auto">✨</span>
+    </div>
+
+    <div id="chats">
+        <div class="chat-item">
+            <h3>Чат #2</h3>
+            <p style="color: #8E8E93">Чат начат с AI-моделью GPT-4o Mini</p>
+        </div>
+        <div class="chat-item">
+            <h3>Чат #1</h3>
+            <p style="color: #8E8E93">Чат начат с AI-моделью GPT-4o Mini</p>
+        </div>
+    </div>
+
+    <button class="new-chat-button">Новый чат</button>
+
+    <script>
+        let tg = window.Telegram.WebApp;
+        tg.expand();
+        tg.ready();
+    </script>
+</body>
+</html> 
